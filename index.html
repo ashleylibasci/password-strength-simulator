@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Password Strength Simulator</p>
+          <h1>Test sample passwords safely</h1>
+          <p class="subtitle">Use a fictional password and learn how to make it stronger. Do not enter your real password.</p>
+        </div>
+        <div class="disclaimer">Disclaimer: Do not enter your real password</div>
+      </header>
+
+      <div class="field-group">
+        <label for="passwordInput">Sample password</label>
+        <input id="passwordInput" type="password" placeholder="Try: Secure!2026" autocomplete="off" spellcheck="false" />
+      </div>
+
+      <div class="strength-panel">
+        <div class="strength-label-row">
+          <span class="strength-badge" id="strengthLabel">Type a password</span>
+          <span class="time-label" id="timeLabel">Waiting for input</span>
+        </div>
+        <div class="strength-bar-track">
+          <div class="strength-bar" id="strengthBar"></div>
+        </div>
+      </div>
+
+      <div class="feedback-panel">
+        <p class="section-title">Feedback</p>
+        <div class="feedback-list" id="feedbackList">
+          <p>Enter a sample password above to see strength, crack estimate, and improvement tips.</p>
+        </div>
+      </div>
+
+      <div class="simulator-panel">
+        <p class="section-title">Hacker Simulation</p>
+        <div class="simulator-window" id="simulatorWindow">
+          <p class="sim-line">Launching password analysis...</p>
+        </div>
+      </div>
+
+      <div class="hint-panel">
+        <p><strong>Tip:</strong> Add length, symbols, and mixed-case letters to improve strength.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
